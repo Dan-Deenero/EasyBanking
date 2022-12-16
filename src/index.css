@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+.fix{
+    @apply bg-white absolute transition-all duration-[800ms] grid w-3/4 right-14 rounded-xl text-center left-14 py-6 justify-center gap-7;
+}
+.grid-cols{
+    grid-template-columns: 40% 60%;
+}
+a.active {
+    @apply after:block after:bg-primary-limeGreen after:w-full after:h-1;
+}
+.image{
+    background: url(./images/bg-intro-desktop.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-x: 150px;
+    background-position-y: -180px;
+}
+
+.mage{
+    @apply  translate-y-[-320px] md:translate-x-[150px] md:translate-y-[-20px] w-[80%] md:w-[80%];
+}
+@media (max-width:768px){
+    .image{
+        background: url(./images/bg-intro-mobile.svg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 100%;
+        background-position: center;
+        background-position-y: -220px;
+        height: 90vh;
+    }
+
+    .grid-cols{
+        grid-template-columns:1fr;
+    }
+}
+
+input, textarea{
+    border: 1px solid rgb(122, 113, 113);
+    border-radius: 5px;
+    height: 40px;
+    padding-left: 10px;
+}
+
+textarea{
+    height: 100px;
+}
+
+li{
+    list-style-type: none;
+}
+
+
